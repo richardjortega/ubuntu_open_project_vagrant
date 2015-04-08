@@ -11,6 +11,12 @@ $ vagrant up
 ## Post-install Config
 ```bash
 $ vagrant ssh
-$ sudo openproject-ce configure
+
 # Set everything to automatic install, use Sendmail for sending
+$ sudo openproject-ce configure
+
+# Go to package installed directory and make sure everything is setup
+$ cd /opt/openproject-ce
+$ bundle exec install
+$ rake assets:precompile
 ```
