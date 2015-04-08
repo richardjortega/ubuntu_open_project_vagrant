@@ -17,6 +17,10 @@ $ sudo openproject-ce configure
 
 # Go to package installed directory and make sure everything is setup
 $ cd /opt/openproject-ce
-$ bundle exec install
-$ rake assets:precompile
+$ gem install bundler
+$ bundle install
+$ bower install
+$ RAILS_ENV="production" bundle exec rake db:migrate
+$ RAILS_ENV="production" bundle exec rake db:seed
+$ RAILS_ENV="production" bundle exec rake assets:precompile
 ```
